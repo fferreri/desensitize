@@ -1,59 +1,33 @@
 {
-  "name": "waryor/desensitize",
-  "description": "A Laravel library for desensitizing routes.",
-  "keywords": [
-    "waryor",
-    "desensitize",
-    "laravel",
-    "routes"
-  ],
-  "homepage": "https://github.com/waryor/desensitize",
-  "license": "MIT",
-  "authors": [
-    {
-      "name": "Felix Deibert",
-      "email": "felix.deibert@waryor.com",
-      "homepage": "https://waryor.com",
-      "role": "Developer"
+    "name": "fferreri/desensitize",
+    "description": "Make your Laravel routes case-insensitive.",
+    "keywords": ["laravel", "routing", "case-insensitive"],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Federico Ferreri",
+            "email": "federico@ferreri.com.ar"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/contracts": "^10.0 || ^11.0",
+        "illuminate/routing": "^10.0 || ^11.0",
+        "illuminate/support": "^10.0 || ^11.0"
     },
-    {
-      "name": "Christoph Heich",
-      "email": "christoph.heich@waryor.com",
-      "homepage": "https://waryor.com",
-      "role": "Developer"
-    }
-  ],
-  "require": {
-    "php" : "^8.0|^8.1",
-    "laravel/framework": "^8.0|^9.0"
-  },
-  "require-dev": {
-    "phpunit/phpunit": "9.5.19",
-    "fakerphp/faker": "^1.19"
-  },
-  "autoload": {
-    "psr-4": {
-      "Waryor\\Desensitize\\": "src"
-    }
-  }, 
-  "autoload-dev": {
+    "autoload": {
         "psr-4": {
-            "Waryor\\Desensitize\\Tests\\": "tests/"
+            "Waryor\\Desensitize\\": "src/"
         }
     },
-
-  "extra": {
-    "laravel": {
-      "providers": [
-        "Waryor\\Desensitize\\DesensitizeServiceProvider"
-      ]
-    }
-  },
-  "scripts": {
-    "test" : [
-      "@php ./vendor/bin/phpunit --testdox"
-    ]
-  },
-  "minimum-stability": "stable",
-  "prefer-stable": true
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Waryor\\Desensitize\\DesensitizeServiceProvider"
+            ]
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
